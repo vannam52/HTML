@@ -1,0 +1,8 @@
+h1 {
+  color: aqua;
+  /* không cho bôi đen */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
