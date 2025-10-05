@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+body {
+  width: 100%;
+}
+/*là chọn tất cả các phần tử trong trang web  */
+#header {
+  display: flex; /* flex là một kiểu hiển thị trong CSS giúp bố cục các phần tử con theo hàng hoặc cột*/
+  align-items: center;
+  justify-content: space-between; /* căn giữa các phần tử con theo chiều ngang*/
+  padding: 20px 80px; /* padding là khoảng cách giữa nội dung và viền của phần tử*/
+  /* 20px là khoảng cách trên và dưới, 80px là khoảng cách trái và phải*/
+  background: #a9a3e9; /* màu nền của phần tử*/
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06); /*  tạo bóng cho phần tử */
+  /* 0 là khoảng cách ngang, 5px là khoảng cách dọc, 15px là độ mờ của bóng, rgba(0,0,0,0.06) là màu sắc của bóng, 0.06 là độ mờ của bóng*/
+  z-index: 999; /* độ ưu tiên của phần tử hero*/
+  position: sticky; /* vị trí cố định của phần tử khi cuộn trang*/
+  top: 0; /* khoảng cách từ đỉnh của phần tử cha*/
+  left: 0; /* khoảng cách từ trái của phần tử cha*/
+}
+
+#navibar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dung để loại bỏ mấy dấu chấm của li */
+#navibar li {
+  list-style: none; /* loại bỏ dấu chấm đầu dòng của danh sách*/
+  padding: 0 20px; /* khoảng cách trái và phải của phần tử li*/
+  position: relative;
+}
+
+#navibar li a {
+  text-decoration: none; /* loại bỏ gạch chân của liên kết*/
+  color: #222; /* màu chữ của liên kết*/
+  font-size: 16px; /* kích thước chữ của liên kết*/
+  font-weight: 600; /* độ đậm của chữ*/
+  transition: 0.3s ease; /* hiệu ứng chuyển đổi khi hover*/
+}
+
+/* Dùng để khi trỏ chuột vào kiểu như home thì nó chuyển màu */
+#navibar li a:hover,
+#navibar li a.active {
+  color: skyblue; /* màu chữ khi hover*/
+}
+
+#navibar li a.active::after,
+#navibar li a:hover::after {
+  /* tạo một đường gạch dưới khi liên kết đang hoạt động */
+  content: ""; /* nội dung của phần tử giả*/
+  width: 30%; /* độ dài của đường gạch dưới*/
+  height: 2px; /* độ dày của đường gạch dưới*/
+  background: skyblue; /* màu nền của đường gạch dưới*/
+  position: absolute; /* vị trí tuyệt đối của phần tử giả*/
+  bottom: -4px; /* khoảng cách từ đáy của phần tử cha*/
+  left: 20px; /*  khoảng cách từ trái của phần tử cha*/
+}
+
+#hero {
+  background-image: url(./bstnguyenminhcong7_QBRP.webp);
+  height: 90vh; /* chiều cao của phần tử hero*/
+  width: 100%; /* chiều rộng của phần tử hero*/
+  background-position: top 25% right 0; /* vị trí của hình nền*/
+  background-size: cover; /* kích thước của hình nền*/
+  padding: 0 80px; /* khoảng cách trái và phải của phần tử hero*/
+  display: flex; /* hiển thị phần tử hero dưới dạng flexbox*/
+  align-items: flex-start;
+  justify-content: center; /* căn giữa các phần tử con theo chiều ngang*/
+  flex-direction: column; /* sắp xếp các phần tử con theo chiều dọc*/
+  z-index: 999; /* độ ưu tiên của phần tử hero*/
+}
+
+#hero h4 {
+  padding-bottom: 15px;
+  /* khoảng cách dưới của phần tử h4 */
+}
+
+#hero h1 {
+  color: aqua;
+}
+
+#hero button {
+  background-image: url(images.png);
+  background-color: transparent; /* màu nền của nút*/
+  color: aqua; /* màu chữ của nút*/
+  padding: 14px 80 px 14px 65px; /* khoảng cách trên, phải, dưới, trái của nút*/
+  border: 0; /* loại bỏ viền của nút*/
+  background-repeat: no-repeat; /* không lặp lại hình nền*/
+  cursor: pointer; /* con trỏ chuột khi hover vào nút*/
+  font-size: 16px; /* kích thước chữ của nút*/
+  font-weight: 600; /* độ đậm của chữ*/
+}
+
+#feature .fe-box {
+  width: 180px;
+  text-align: center;
+  padding: 25px 15px; /* khoảng cách trên, phải, dưới, trái của phần tử fe-box*/
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03); /* tạo bóng cho phần tử fe-box*/
+  border: 1px solid rgba(244, 244, 244, 0.09); /* viền của phần tử fe-box*/
+  border-radius: 10px; /* bo tròn các góc của phần tử fe-box*/
+  margin: 15px 0;
+}
